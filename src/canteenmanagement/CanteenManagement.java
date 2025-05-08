@@ -6,6 +6,7 @@ public class CanteenManagement {
         System.out.println("testing");
         System.out.println("KUpal");
         System.out.println("new");
+        System.out.println("testingadnawd");
     }
     
 }
