@@ -114,8 +114,9 @@ public class Dashboard extends javax.swing.JFrame {
 
         panelWrapper.setName(""); // NOI18N
 
-        panelHeaderWrapper.setBackground(new java.awt.Color(255, 255, 255));
+        panelHeaderWrapper.setBackground(new java.awt.Color(245, 233, 220));
 
+        labelTitle.setBackground(new java.awt.Color(75, 46, 46));
         labelTitle.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         labelTitle.setText("Canteen Management System");
 
@@ -136,10 +137,13 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        panelMenuList.setBackground(new java.awt.Color(245, 233, 220));
+
         labelMenuTitle.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         labelMenuTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelMenuTitle.setText("Menu List");
 
+        panelMenu1.setBackground(new java.awt.Color(255, 248, 237));
         panelMenu1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         panelMenu1.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu1.setMinimumSize(new java.awt.Dimension(205, 260));
@@ -206,6 +210,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        panelMenu2.setBackground(new java.awt.Color(255, 248, 237));
         panelMenu2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         panelMenu2.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu2.setMinimumSize(new java.awt.Dimension(205, 260));
@@ -271,6 +276,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        panelMenu3.setBackground(new java.awt.Color(255, 248, 237));
         panelMenu3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         panelMenu3.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu3.setMinimumSize(new java.awt.Dimension(205, 260));
@@ -279,12 +285,15 @@ public class Dashboard extends javax.swing.JFrame {
         labelMenuName3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelMenuName3.setText("MenuName");
 
+        labelMenuPrice3.setBackground(new java.awt.Color(95, 95, 95));
         labelMenuPrice3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuPrice3.setText("Price:");
 
+        labelMenuQuantity3.setBackground(new java.awt.Color(95, 95, 95));
         labelMenuQuantity3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuQuantity3.setText("Quantity:");
 
+        labelMenuPurchase3.setBackground(new java.awt.Color(95, 95, 95));
         labelMenuPurchase3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuPurchase3.setText("Purchase:");
 
@@ -336,6 +345,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        panelMenu4.setBackground(new java.awt.Color(255, 248, 237));
         panelMenu4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         panelMenu4.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu4.setMinimumSize(new java.awt.Dimension(205, 260));
@@ -401,6 +411,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        panelMenu5.setBackground(new java.awt.Color(255, 248, 237));
         panelMenu5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         panelMenu5.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu5.setMinimumSize(new java.awt.Dimension(205, 260));
@@ -466,6 +477,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        panelMenu7.setBackground(new java.awt.Color(255, 248, 237));
         panelMenu7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         panelMenu7.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu7.setMinimumSize(new java.awt.Dimension(205, 260));
@@ -531,6 +543,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        panelMenu8.setBackground(new java.awt.Color(255, 248, 237));
         panelMenu8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         panelMenu8.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu8.setMinimumSize(new java.awt.Dimension(205, 260));
@@ -596,6 +609,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        panelMenu9.setBackground(new java.awt.Color(255, 248, 237));
         panelMenu9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         panelMenu9.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu9.setMinimumSize(new java.awt.Dimension(205, 260));
@@ -661,6 +675,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        panelMenu10.setBackground(new java.awt.Color(255, 248, 237));
         panelMenu10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         panelMenu10.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu10.setMinimumSize(new java.awt.Dimension(205, 260));
@@ -726,6 +741,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        panelMenu11.setBackground(new java.awt.Color(255, 248, 237));
         panelMenu11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         panelMenu11.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu11.setMinimumSize(new java.awt.Dimension(205, 260));
@@ -863,7 +879,9 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton2.setBackground(new java.awt.Color(0, 153, 255));
+        panelFooterWrapper.setBackground(new java.awt.Color(245, 233, 220));
+
+        jButton2.setBackground(new java.awt.Color(61, 74, 80));
         jButton2.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
         jButton2.setText("Receipt");
         jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -873,7 +891,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 51));
+        jButton3.setBackground(new java.awt.Color(247, 232, 182));
         jButton3.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
         jButton3.setText("Reset");
         jButton3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -883,7 +901,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        total.setBackground(new java.awt.Color(51, 255, 51));
+        total.setBackground(new java.awt.Color(138, 154, 91));
         total.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
         total.setText("Total");
         total.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -893,7 +911,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(255, 51, 51));
+        jButton5.setBackground(new java.awt.Color(199, 101, 90));
         jButton5.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
         jButton5.setText("Exit");
         jButton5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -993,7 +1011,7 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+     reset();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void totalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalActionPerformed
@@ -1001,7 +1019,7 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_totalActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+              System.exit(0);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
@@ -1020,7 +1038,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel labelMenuName3;
     private javax.swing.JLabel labelMenuName4;
     private javax.swing.JLabel labelMenuName5;
-    private javax.swing.JLabel labelMenuName6;
     private javax.swing.JLabel labelMenuName7;
     private javax.swing.JLabel labelMenuName8;
     private javax.swing.JLabel labelMenuName9;
@@ -1031,7 +1048,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel labelMenuPrice3;
     private javax.swing.JLabel labelMenuPrice4;
     private javax.swing.JLabel labelMenuPrice5;
-    private javax.swing.JLabel labelMenuPrice6;
     private javax.swing.JLabel labelMenuPrice7;
     private javax.swing.JLabel labelMenuPrice8;
     private javax.swing.JLabel labelMenuPrice9;
@@ -1042,7 +1058,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel labelMenuPurchase3;
     private javax.swing.JLabel labelMenuPurchase4;
     private javax.swing.JLabel labelMenuPurchase5;
-    private javax.swing.JLabel labelMenuPurchase6;
     private javax.swing.JLabel labelMenuPurchase7;
     private javax.swing.JLabel labelMenuPurchase8;
     private javax.swing.JLabel labelMenuPurchase9;
@@ -1053,7 +1068,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel labelMenuQuantity3;
     private javax.swing.JLabel labelMenuQuantity4;
     private javax.swing.JLabel labelMenuQuantity5;
-    private javax.swing.JLabel labelMenuQuantity6;
     private javax.swing.JLabel labelMenuQuantity7;
     private javax.swing.JLabel labelMenuQuantity8;
     private javax.swing.JLabel labelMenuQuantity9;
@@ -1066,7 +1080,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JSpinner menuAmount3;
     private javax.swing.JSpinner menuAmount4;
     private javax.swing.JSpinner menuAmount5;
-    private javax.swing.JSpinner menuAmount6;
     private javax.swing.JSpinner menuAmount7;
     private javax.swing.JSpinner menuAmount8;
     private javax.swing.JSpinner menuAmount9;
@@ -1077,7 +1090,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel menuPrice3;
     private javax.swing.JLabel menuPrice4;
     private javax.swing.JLabel menuPrice5;
-    private javax.swing.JLabel menuPrice6;
     private javax.swing.JLabel menuPrice7;
     private javax.swing.JLabel menuPrice8;
     private javax.swing.JLabel menuPrice9;
@@ -1091,7 +1103,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel panelMenu3;
     private javax.swing.JPanel panelMenu4;
     private javax.swing.JPanel panelMenu5;
-    private javax.swing.JPanel panelMenu6;
     private javax.swing.JPanel panelMenu7;
     private javax.swing.JPanel panelMenu8;
     private javax.swing.JPanel panelMenu9;
@@ -1104,10 +1115,13 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JCheckBox purchase3;
     private javax.swing.JCheckBox purchase4;
     private javax.swing.JCheckBox purchase5;
-    private javax.swing.JCheckBox purchase6;
     private javax.swing.JCheckBox purchase7;
     private javax.swing.JCheckBox purchase8;
     private javax.swing.JCheckBox purchase9;
     private javax.swing.JButton total;
     // End of variables declaration//GEN-END:variables
+
+    private void reset() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
