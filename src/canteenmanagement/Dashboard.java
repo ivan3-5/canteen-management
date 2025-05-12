@@ -144,7 +144,7 @@ public class Dashboard extends javax.swing.JFrame {
         labelMenuTitle.setText("Menu List");
 
         panelMenu1.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu1.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu1.setMinimumSize(new java.awt.Dimension(205, 260));
         panelMenu1.setPreferredSize(new java.awt.Dimension(205, 260));
@@ -181,7 +181,7 @@ public class Dashboard extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelMenu1Layout.createSequentialGroup()
-                                .addComponent(menuPrice1, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                                .addComponent(menuPrice1, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
                                 .addGap(45, 45, 45))
                             .addGroup(panelMenu1Layout.createSequentialGroup()
                                 .addGroup(panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,7 +211,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu2.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu2.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu2.setMinimumSize(new java.awt.Dimension(205, 260));
 
@@ -277,7 +277,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu3.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu3.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu3.setMinimumSize(new java.awt.Dimension(205, 260));
 
@@ -346,7 +346,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu4.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu4.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu4.setMinimumSize(new java.awt.Dimension(205, 260));
 
@@ -412,7 +412,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu5.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu5.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu5.setMinimumSize(new java.awt.Dimension(205, 260));
 
@@ -478,7 +478,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu7.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu7.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu7.setMinimumSize(new java.awt.Dimension(205, 260));
 
@@ -544,7 +544,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu8.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu8.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu8.setMinimumSize(new java.awt.Dimension(205, 260));
 
@@ -610,7 +610,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu9.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu9.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu9.setMinimumSize(new java.awt.Dimension(205, 260));
 
@@ -676,7 +676,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu10.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu10.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu10.setMinimumSize(new java.awt.Dimension(205, 260));
 
@@ -742,7 +742,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu11.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu11.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu11.setMinimumSize(new java.awt.Dimension(205, 260));
 
@@ -852,7 +852,7 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(panelMenu3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panelMenu4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panelMenu5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelMenu1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(panelMenu1, javax.swing.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelMenuListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(panelMenu7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
