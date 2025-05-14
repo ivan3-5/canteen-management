@@ -144,14 +144,14 @@ public class Dashboard extends javax.swing.JFrame {
         labelMenuTitle.setText("Menu List");
 
         panelMenu1.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu1.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu1.setMinimumSize(new java.awt.Dimension(205, 260));
         panelMenu1.setPreferredSize(new java.awt.Dimension(205, 260));
 
         labelMenuName1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuName1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMenuName1.setText("MenuName");
+        labelMenuName1.setText("FRIED CHICKEN");
 
         labelMenuPrice1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuPrice1.setText("Price:");
@@ -163,7 +163,7 @@ public class Dashboard extends javax.swing.JFrame {
         labelMenuPurchase1.setText("Purchase:");
 
         menuPrice1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        menuPrice1.setText("$");
+        menuPrice1.setText("₱35");
 
         javax.swing.GroupLayout panelMenu1Layout = new javax.swing.GroupLayout(panelMenu1);
         panelMenu1.setLayout(panelMenu1Layout);
@@ -181,7 +181,7 @@ public class Dashboard extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelMenu1Layout.createSequentialGroup()
-                                .addComponent(menuPrice1, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                                .addComponent(menuPrice1, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
                                 .addGap(45, 45, 45))
                             .addGroup(panelMenu1Layout.createSequentialGroup()
                                 .addGroup(panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -211,13 +211,13 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu2.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu2.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu2.setMinimumSize(new java.awt.Dimension(205, 260));
 
         labelMenuName2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuName2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMenuName2.setText("MenuName");
+        labelMenuName2.setText("TURON");
 
         labelMenuPrice2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuPrice2.setText("Price:");
@@ -229,7 +229,7 @@ public class Dashboard extends javax.swing.JFrame {
         labelMenuPurchase2.setText("Purchase:");
 
         menuPrice2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        menuPrice2.setText("$");
+        menuPrice2.setText("₱5");
 
         javax.swing.GroupLayout panelMenu2Layout = new javax.swing.GroupLayout(panelMenu2);
         panelMenu2.setLayout(panelMenu2Layout);
@@ -277,13 +277,13 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu3.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu3.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu3.setMinimumSize(new java.awt.Dimension(205, 260));
 
         labelMenuName3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuName3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMenuName3.setText("MenuName");
+        labelMenuName3.setText("BANANA CUE");
 
         labelMenuPrice3.setBackground(new java.awt.Color(95, 95, 95));
         labelMenuPrice3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -298,7 +298,7 @@ public class Dashboard extends javax.swing.JFrame {
         labelMenuPurchase3.setText("Purchase:");
 
         menuPrice3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        menuPrice3.setText("$");
+        menuPrice3.setText("₱5");
 
         javax.swing.GroupLayout panelMenu3Layout = new javax.swing.GroupLayout(panelMenu3);
         panelMenu3.setLayout(panelMenu3Layout);
@@ -346,13 +346,13 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu4.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu4.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu4.setMinimumSize(new java.awt.Dimension(205, 260));
 
         labelMenuName4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuName4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMenuName4.setText("MenuName");
+        labelMenuName4.setText("KAMOTE CUE");
 
         labelMenuPrice4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuPrice4.setText("Price:");
@@ -364,7 +364,7 @@ public class Dashboard extends javax.swing.JFrame {
         labelMenuPurchase4.setText("Purchase:");
 
         menuPrice4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        menuPrice4.setText("$");
+        menuPrice4.setText("₱5");
 
         javax.swing.GroupLayout panelMenu4Layout = new javax.swing.GroupLayout(panelMenu4);
         panelMenu4.setLayout(panelMenu4Layout);
@@ -412,13 +412,13 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu5.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu5.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu5.setMinimumSize(new java.awt.Dimension(205, 260));
 
         labelMenuName5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuName5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMenuName5.setText("MenuName");
+        labelMenuName5.setText("PUTO");
 
         labelMenuPrice5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuPrice5.setText("Price:");
@@ -430,7 +430,7 @@ public class Dashboard extends javax.swing.JFrame {
         labelMenuPurchase5.setText("Purchase:");
 
         menuPrice5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        menuPrice5.setText("$");
+        menuPrice5.setText("₱10");
 
         javax.swing.GroupLayout panelMenu5Layout = new javax.swing.GroupLayout(panelMenu5);
         panelMenu5.setLayout(panelMenu5Layout);
@@ -478,13 +478,13 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu7.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu7.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu7.setMinimumSize(new java.awt.Dimension(205, 260));
 
         labelMenuName7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuName7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMenuName7.setText("MenuName");
+        labelMenuName7.setText("CHEESE STICKS");
 
         labelMenuPrice7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuPrice7.setText("Price:");
@@ -496,7 +496,7 @@ public class Dashboard extends javax.swing.JFrame {
         labelMenuPurchase7.setText("Purchase:");
 
         menuPrice7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        menuPrice7.setText("$");
+        menuPrice7.setText("₱ 15");
 
         javax.swing.GroupLayout panelMenu7Layout = new javax.swing.GroupLayout(panelMenu7);
         panelMenu7.setLayout(panelMenu7Layout);
@@ -544,13 +544,13 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu8.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu8.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu8.setMinimumSize(new java.awt.Dimension(205, 260));
 
         labelMenuName8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuName8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMenuName8.setText("MenuName");
+        labelMenuName8.setText("FRENCH FRIES");
 
         labelMenuPrice8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuPrice8.setText("Price:");
@@ -562,7 +562,7 @@ public class Dashboard extends javax.swing.JFrame {
         labelMenuPurchase8.setText("Purchase:");
 
         menuPrice8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        menuPrice8.setText("$");
+        menuPrice8.setText("₱20");
 
         javax.swing.GroupLayout panelMenu8Layout = new javax.swing.GroupLayout(panelMenu8);
         panelMenu8.setLayout(panelMenu8Layout);
@@ -610,13 +610,13 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu9.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu9.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu9.setMinimumSize(new java.awt.Dimension(205, 260));
 
         labelMenuName9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuName9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMenuName9.setText("MenuName");
+        labelMenuName9.setText("SIOPAO");
 
         labelMenuPrice9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuPrice9.setText("Price:");
@@ -628,7 +628,7 @@ public class Dashboard extends javax.swing.JFrame {
         labelMenuPurchase9.setText("Purchase:");
 
         menuPrice9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        menuPrice9.setText("$");
+        menuPrice9.setText("₱ 25");
 
         javax.swing.GroupLayout panelMenu9Layout = new javax.swing.GroupLayout(panelMenu9);
         panelMenu9.setLayout(panelMenu9Layout);
@@ -676,13 +676,13 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu10.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu10.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu10.setMinimumSize(new java.awt.Dimension(205, 260));
 
         labelMenuName10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuName10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMenuName10.setText("MenuName");
+        labelMenuName10.setText("KUTSINTA");
 
         labelMenuPrice10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuPrice10.setText("Price:");
@@ -694,7 +694,7 @@ public class Dashboard extends javax.swing.JFrame {
         labelMenuPurchase10.setText("Purchase:");
 
         menuPrice10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        menuPrice10.setText("$");
+        menuPrice10.setText("₱ 15");
 
         javax.swing.GroupLayout panelMenu10Layout = new javax.swing.GroupLayout(panelMenu10);
         panelMenu10.setLayout(panelMenu10Layout);
@@ -742,13 +742,13 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         panelMenu11.setBackground(new java.awt.Color(255, 248, 237));
-        panelMenu11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        panelMenu11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
         panelMenu11.setMaximumSize(new java.awt.Dimension(205, 260));
         panelMenu11.setMinimumSize(new java.awt.Dimension(205, 260));
 
         labelMenuName11.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuName11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelMenuName11.setText("MenuName");
+        labelMenuName11.setText("ICE CANDY");
 
         labelMenuPrice11.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelMenuPrice11.setText("Price:");
@@ -760,7 +760,7 @@ public class Dashboard extends javax.swing.JFrame {
         labelMenuPurchase11.setText("Purchase:");
 
         menuPrice11.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        menuPrice11.setText("$");
+        menuPrice11.setText("₱5");
 
         javax.swing.GroupLayout panelMenu11Layout = new javax.swing.GroupLayout(panelMenu11);
         panelMenu11.setLayout(panelMenu11Layout);
@@ -852,7 +852,7 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(panelMenu3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panelMenu4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panelMenu5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelMenu1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(panelMenu1, javax.swing.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelMenuListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(panelMenu7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)

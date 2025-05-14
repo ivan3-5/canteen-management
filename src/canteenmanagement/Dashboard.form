@@ -205,7 +205,7 @@
                               <Component id="panelMenu3" max="32767" attributes="0"/>
                               <Component id="panelMenu4" max="32767" attributes="0"/>
                               <Component id="panelMenu5" max="32767" attributes="0"/>
-                              <Component id="panelMenu1" max="32767" attributes="0"/>
+                              <Component id="panelMenu1" pref="262" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
@@ -237,7 +237,7 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                        <LineBorder thickness="2"/>
                       </Border>
                     </Property>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -267,7 +267,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <Component id="menuPrice1" pref="70" max="32767" attributes="0"/>
+                                              <Component id="menuPrice1" pref="68" max="32767" attributes="0"/>
                                               <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" attributes="0">
@@ -316,7 +316,7 @@
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="MenuName"/>
+                        <Property name="text" type="java.lang.String" value="FRIED CHICKEN"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="labelMenuPrice1">
@@ -348,7 +348,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="$"/>
+                        <Property name="text" type="java.lang.String" value="&#x20b1;35"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="menuAmount1">
@@ -364,7 +364,7 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                        <LineBorder thickness="2"/>
                       </Border>
                     </Property>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -440,7 +440,7 @@
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="MenuName"/>
+                        <Property name="text" type="java.lang.String" value="TURON"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="labelMenuPrice2">
@@ -472,7 +472,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="$"/>
+                        <Property name="text" type="java.lang.String" value="&#x20b1;5"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="menuAmount2">
@@ -488,7 +488,7 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                        <LineBorder thickness="2"/>
                       </Border>
                     </Property>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -564,7 +564,7 @@
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="MenuName"/>
+                        <Property name="text" type="java.lang.String" value="BANANA CUE"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="labelMenuPrice3">
@@ -605,7 +605,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="$"/>
+                        <Property name="text" type="java.lang.String" value="&#x20b1;5"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="menuAmount3">
@@ -621,7 +621,7 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                        <LineBorder thickness="2"/>
                       </Border>
                     </Property>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -697,7 +697,7 @@
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="MenuName"/>
+                        <Property name="text" type="java.lang.String" value="KAMOTE CUE"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="labelMenuPrice4">
@@ -729,7 +729,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="$"/>
+                        <Property name="text" type="java.lang.String" value="&#x20b1;5"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="menuAmount4">
@@ -745,7 +745,7 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                        <LineBorder thickness="2"/>
                       </Border>
                     </Property>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -821,7 +821,7 @@
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="MenuName"/>
+                        <Property name="text" type="java.lang.String" value="PUTO"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="labelMenuPrice5">
@@ -853,7 +853,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="$"/>
+                        <Property name="text" type="java.lang.String" value="&#x20b1;10"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="menuAmount5">
@@ -869,7 +869,7 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                        <LineBorder thickness="2"/>
                       </Border>
                     </Property>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -945,7 +945,7 @@
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="MenuName"/>
+                        <Property name="text" type="java.lang.String" value="CHEESE STICKS"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="labelMenuPrice7">
@@ -977,7 +977,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="$"/>
+                        <Property name="text" type="java.lang.String" value="&#x20b1; 15"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="menuAmount7">
@@ -993,7 +993,7 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                        <LineBorder thickness="2"/>
                       </Border>
                     </Property>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -1069,7 +1069,7 @@
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="MenuName"/>
+                        <Property name="text" type="java.lang.String" value="FRENCH FRIES"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="labelMenuPrice8">
@@ -1101,7 +1101,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="$"/>
+                        <Property name="text" type="java.lang.String" value="&#x20b1;20"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="menuAmount8">
@@ -1117,7 +1117,7 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                        <LineBorder thickness="2"/>
                       </Border>
                     </Property>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -1193,7 +1193,7 @@
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="MenuName"/>
+                        <Property name="text" type="java.lang.String" value="SIOPAO"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="labelMenuPrice9">
@@ -1225,7 +1225,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="$"/>
+                        <Property name="text" type="java.lang.String" value="&#x20b1; 25"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="menuAmount9">
@@ -1241,7 +1241,7 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                        <LineBorder thickness="2"/>
                       </Border>
                     </Property>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -1317,7 +1317,7 @@
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="MenuName"/>
+                        <Property name="text" type="java.lang.String" value="KUTSINTA"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="labelMenuPrice10">
@@ -1349,7 +1349,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="$"/>
+                        <Property name="text" type="java.lang.String" value="&#x20b1; 15"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="menuAmount10">
@@ -1365,7 +1365,7 @@
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder/>
+                        <LineBorder thickness="2"/>
                       </Border>
                     </Property>
                     <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -1441,7 +1441,7 @@
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
                         <Property name="horizontalAlignment" type="int" value="0"/>
-                        <Property name="text" type="java.lang.String" value="MenuName"/>
+                        <Property name="text" type="java.lang.String" value="ICE CANDY"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="labelMenuPrice11">
@@ -1473,7 +1473,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="$"/>
+                        <Property name="text" type="java.lang.String" value="&#x20b1;5"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="menuAmount11">
