@@ -1,16 +1,12 @@
 package canteenmanagement;
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.*;
 import java.util.Date;
 import javax.swing.*;
-import javax.swing.text.Document;
-
 public class Dashboard extends javax.swing.JFrame {
     int total;
     int x;
@@ -1087,7 +1083,7 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(panelFooterWrapperLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelFooterWrapperLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(buttonTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
+                    .addComponent(buttonTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
                     .addComponent(buttonReceipt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(buttonReset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(buttonExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1105,7 +1101,7 @@ public class Dashboard extends javax.swing.JFrame {
         panelReceipt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         textAreaReceipt.setColumns(20);
-        textAreaReceipt.setFont(new java.awt.Font("Consolas", 0, 12)); // NOI18N
+        textAreaReceipt.setFont(new java.awt.Font("Courier New", 0, 12)); // NOI18N
         textAreaReceipt.setRows(5);
         textAreaReceipt.setBorder(null);
         textAreaReceipt.setDisabledTextColor(new java.awt.Color(0, 0, 0));
@@ -1218,7 +1214,9 @@ public class Dashboard extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelWrapper, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panelWrapper, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         panelWrapper.getAccessibleContext().setAccessibleName("");
