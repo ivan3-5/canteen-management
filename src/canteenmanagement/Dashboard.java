@@ -1,12 +1,25 @@
 package canteenmanagement;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.text.*;
+import java.util.Date;
 import javax.swing.*;
+import javax.swing.text.Document;
 
 public class Dashboard extends javax.swing.JFrame {
+    int total;
+    int x;
+    boolean totalButtonPressed = false;
 
     public Dashboard() {
         initComponents();
+        startClock();
+        resizeLogoTitle();
         setScalingImages();
     }
 
@@ -23,6 +36,7 @@ public class Dashboard extends javax.swing.JFrame {
         panelHeaderWrapper = new javax.swing.JPanel();
         labelLogoIcon = new javax.swing.JLabel();
         labelTitle = new javax.swing.JLabel();
+        labelTimeAndDate = new javax.swing.JLabel();
         panelBodyWrapper = new javax.swing.JPanel();
         panelMenuList = new javax.swing.JPanel();
         labelMenuTitle = new javax.swing.JLabel();
@@ -114,9 +128,11 @@ public class Dashboard extends javax.swing.JFrame {
         panelSideOuterWrapper = new javax.swing.JPanel();
         panelSideInnerWrapper = new javax.swing.JPanel();
         panelReceipt = new javax.swing.JPanel();
+        scrollPanelReceipt = new javax.swing.JScrollPane();
+        textAreaReceipt = new javax.swing.JTextArea();
         labelMenuName11 = new javax.swing.JLabel();
         labelTotal = new javax.swing.JLabel();
-        totalAmount = new javax.swing.JTextField();
+        grandTotal = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dashboard Frame");
@@ -146,27 +162,36 @@ public class Dashboard extends javax.swing.JFrame {
         labelTitle.setFont(new java.awt.Font("Times New Roman", 1, 48)); // NOI18N
         labelTitle.setText("Canteen Management System");
 
+        labelTimeAndDate.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
+        labelTimeAndDate.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
         javax.swing.GroupLayout panelHeaderWrapperLayout = new javax.swing.GroupLayout(panelHeaderWrapper);
         panelHeaderWrapper.setLayout(panelHeaderWrapperLayout);
         panelHeaderWrapperLayout.setHorizontalGroup(
             panelHeaderWrapperLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelHeaderWrapperLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(27, 27, 27)
                 .addComponent(labelLogoIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(labelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 678, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(labelTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(labelTimeAndDate, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49))
         );
         panelHeaderWrapperLayout.setVerticalGroup(
             panelHeaderWrapperLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(labelLogoIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelHeaderWrapperLayout.createSequentialGroup()
+            .addGroup(panelHeaderWrapperLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(labelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
+                .addGroup(panelHeaderWrapperLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelTimeAndDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(labelTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         panelBodyWrapper.setBackground(new java.awt.Color(245, 233, 220));
+        panelBodyWrapper.setMaximumSize(new java.awt.Dimension(1093, 601));
+        panelBodyWrapper.setMinimumSize(new java.awt.Dimension(1093, 601));
 
         panelMenuList.setBackground(new java.awt.Color(245, 233, 220));
         panelMenuList.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -192,7 +217,7 @@ public class Dashboard extends javax.swing.JFrame {
         labelMenuQuantity1.setText("Quantity:");
 
         menuPrice1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        menuPrice1.setText("₱35");
+        menuPrice1.setText("₱15");
 
         menuAmount1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 50, 1));
 
@@ -967,9 +992,9 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(labelMenuTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelMenuListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelMenu3, javax.swing.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE)
-                    .addComponent(panelMenu4, javax.swing.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE)
-                    .addComponent(panelMenu5, javax.swing.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE)
+                    .addComponent(panelMenu3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelMenu4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelMenu5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panelMenu1, javax.swing.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE)
                     .addComponent(panelMenu2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1079,15 +1104,23 @@ public class Dashboard extends javax.swing.JFrame {
         panelReceipt.setBackground(new java.awt.Color(255, 255, 255));
         panelReceipt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        textAreaReceipt.setColumns(20);
+        textAreaReceipt.setFont(new java.awt.Font("Consolas", 0, 12)); // NOI18N
+        textAreaReceipt.setRows(5);
+        textAreaReceipt.setBorder(null);
+        textAreaReceipt.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        textAreaReceipt.setEnabled(false);
+        scrollPanelReceipt.setViewportView(textAreaReceipt);
+
         javax.swing.GroupLayout panelReceiptLayout = new javax.swing.GroupLayout(panelReceipt);
         panelReceipt.setLayout(panelReceiptLayout);
         panelReceiptLayout.setHorizontalGroup(
             panelReceiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(scrollPanelReceipt)
         );
         panelReceiptLayout.setVerticalGroup(
             panelReceiptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(scrollPanelReceipt)
         );
 
         labelMenuName11.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -1097,12 +1130,12 @@ public class Dashboard extends javax.swing.JFrame {
         labelTotal.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
         labelTotal.setText("Total:   ₱");
 
-        totalAmount.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        totalAmount.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        totalAmount.setText("0.0");
-        totalAmount.addActionListener(new java.awt.event.ActionListener() {
+        grandTotal.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        grandTotal.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        grandTotal.setText("0");
+        grandTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                totalAmountActionPerformed(evt);
+                grandTotalActionPerformed(evt);
             }
         });
 
@@ -1114,9 +1147,9 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(panelSideInnerWrapperLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelSideInnerWrapperLayout.createSequentialGroup()
-                        .addComponent(labelTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+                        .addComponent(labelTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(totalAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(grandTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(labelMenuName11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(panelReceipt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -1131,7 +1164,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelSideInnerWrapperLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(labelTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(totalAmount, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE))
+                    .addComponent(grandTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE))
                 .addGap(19, 19, 19))
         );
 
@@ -1181,7 +1214,7 @@ public class Dashboard extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelWrapper, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelWrapper, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1195,31 +1228,25 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void loadAndScaleImage(JLabel label, String imagePath) {
         try {
-            // Get the label's current size
             int labelWidth = label.getWidth();
             int labelHeight = label.getHeight();
 
-            // Load the image
             ImageIcon originalIcon = new ImageIcon(getClass().getResource(imagePath));
             Image originalImage = originalIcon.getImage();
 
-            // Calculate scaling while maintaining aspect ratio
             double imgRatio = (double)originalIcon.getIconHeight() / originalIcon.getIconWidth();
             double labelRatio = (double)labelHeight / labelWidth;
 
             int newWidth, newHeight;
 
             if (labelRatio > imgRatio) {
-                // Fit to width
                 newWidth = labelWidth;
                 newHeight = (int)(labelWidth * imgRatio);
             } else {
-                // Fit to height
                 newHeight = labelHeight;
                 newWidth = (int)(labelHeight / imgRatio);
             }
 
-            // Scale the image smoothly
             Image scaledImage = originalImage.getScaledInstance(
                 newWidth, 
                 newHeight, 
@@ -1259,6 +1286,11 @@ public class Dashboard extends javax.swing.JFrame {
         menuAmount8.setValue(0);
         menuAmount9.setValue(0);
         menuAmount10.setValue(0);
+        textAreaReceipt.setText("");
+        grandTotal.setText("0");
+        this.x = 0;
+        this.total = 0;
+        this.totalButtonPressed = false;
     }
     
     public void resizeLogoTitle() {
@@ -1282,8 +1314,79 @@ public class Dashboard extends javax.swing.JFrame {
         labelLogoIcon.setIcon(new ImageIcon(scaledImg));
     }
     
+    public void startClock() {
+        Timer timer = new Timer(1000, e -> {
+            Date now = new Date();
+
+            SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss a");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM dd, yyyy");
+
+            String html = "<html><div style='text-align: center;'>"
+                        + "<span style='font-size:24px;'>" + timeFormat.format(now) + "</span><br>"
+                        + "<span style='font-size:14px;'>" + dateFormat.format(now) + "</span>"
+                        + "</div></html>";
+            labelTimeAndDate.setText(html);
+        });
+
+        timer.start();
+    }
+    
+    public void printReceipt(String name, int price, int quantity) {
+        this.x++;
+        if (this.x == 1) {
+            Date now = new Date();
+
+            SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss a");
+            SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM dd, yyyy");
+
+            textAreaReceipt.setText(
+                "************** Canteen Management System **************\n" +
+                "Time: " + timeFormat.format(now) + "\t :|:\t Date: " + dateFormat.format(now) + "\n" +
+                "*******************************************************\n" +
+                String.format("%-4s %-20s %-8s %-5s %-12s\n", "#", "Name", "Price", "Qty", "Total Amount")
+            );
+        }
+
+        String prevReceipt = textAreaReceipt.getText();
+        int totalAmount = price * quantity;
+        this.total += totalAmount;
+
+        String formattedLine = String.format("%-4d %-20s ₱%-7d %-5d ₱%-11d\n",
+                                             this.x, name, price, quantity, totalAmount);
+
+        textAreaReceipt.setText(prevReceipt + formattedLine);
+    }
+    
+    public void saveReceiptToPDF() {
+        ExportPanelToPDF exportPanel = new ExportPanelToPDF();
+        
+        String userHome = System.getProperty("user.home");
+        Path downloadsPath = Paths.get(userHome, "Downloads");
+        Path receiptPath = downloadsPath.resolve("receipt.pdf");
+        
+        File receiptFile = receiptPath.toFile();
+        
+        exportPanel.exportPanelToPDF(panelReceipt, receiptFile.getAbsolutePath());
+    }
+    
     private void buttonReceiptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReceiptActionPerformed
-        // TODO add your handling code here:
+        if (this.totalButtonPressed == true) {
+            int saveReceipt = JOptionPane.showConfirmDialog(null, "Do you want to save the receipt as PDF? (It will overwrite the 'receipt.pdf' file if it exist in 'Downloads' folder.)", "Select", JOptionPane.YES_NO_OPTION);
+            if (saveReceipt == 0) {
+                String prevReceipt = textAreaReceipt.getText();
+                String endingLine = "*******************************************************\n" +
+                                    "*********** Thank you for using our system! ***********\n" +
+                                    "*******************************************************";
+                textAreaReceipt.setText(prevReceipt + endingLine);
+                
+                System.out.println("Saving PDF...");
+                saveReceiptToPDF();
+                System.out.println("Saved!");
+                JOptionPane.showMessageDialog(null, "Receipt has been saved!", "File Saved", JOptionPane.INFORMATION_MESSAGE);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "No total value yet.", "Invalid", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_buttonReceiptActionPerformed
 
     private void buttonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonResetActionPerformed
@@ -1294,7 +1397,23 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonResetActionPerformed
 
     private void buttonTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonTotalActionPerformed
-        // TODO add your handling code here:
+        String receiptCheck = textAreaReceipt.getText();
+        if ("".equals(receiptCheck) | " ".equals(receiptCheck)) {
+            JOptionPane.showMessageDialog(null, "Receipt is empty.", "Invalid", JOptionPane.WARNING_MESSAGE);
+        } else if (this.totalButtonPressed == false) {
+            int totalPress = JOptionPane.showConfirmDialog(null, "Do you really want to get the grand total payment?", "Select", JOptionPane.YES_NO_OPTION);
+            if (totalPress == 0) {
+                String prevReceipt = textAreaReceipt.getText();
+                String formattedLine = "*******************************************************\n" +
+                         String.format("%-40s ₱%-11d\n",
+                                       "Grand Total:", this.total);
+                textAreaReceipt.setText(prevReceipt + formattedLine);
+                grandTotal.setText(Integer.toString(this.total));
+                this.totalButtonPressed = true;
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Total button already pressed.", "Invalid", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_buttonTotalActionPerformed
 
     private void buttonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonExitActionPerformed
@@ -1305,51 +1424,212 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonExitActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        resizeLogoTitle();
+        // TODO add your handling code here:
     }//GEN-LAST:event_formWindowOpened
 
     private void menuAdd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAdd1ActionPerformed
-        // TODO add your handling code here:
+        if (this.totalButtonPressed == false) {
+            String name = labelMenuName1.getText();
+            String priceText = menuPrice1.getText();
+            String removeP = priceText.replace("₱", "").trim();
+            int price = Integer.parseInt(removeP);
+            int quantity = Integer.parseInt(menuAmount1.getValue().toString());
+
+            System.out.println(name + "-" + price + "-" + quantity);
+            if (quantity <= 0) {
+                JOptionPane.showMessageDialog(null, "No value set or invalid input.", "Invalid", JOptionPane.WARNING_MESSAGE);
+            } else {
+                printReceipt(name, price, quantity);
+                menuAmount1.setValue(0);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Total button has been pressed. Need to reset.", "Invalid", JOptionPane.WARNING_MESSAGE);
+        }
+        
     }//GEN-LAST:event_menuAdd1ActionPerformed
 
     private void menuAdd3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAdd3ActionPerformed
-        // TODO add your handling code here:
+        if (this.totalButtonPressed == false) {
+            String name = labelMenuName3.getText();
+            String priceText = menuPrice3.getText();
+            String removeP = priceText.replace("₱", "").trim();
+            int price = Integer.parseInt(removeP);
+            int quantity = Integer.parseInt(menuAmount3.getValue().toString());
+
+            System.out.println(name + "-" + price + "-" + quantity);
+            if (quantity <= 0) {
+                JOptionPane.showMessageDialog(null, "No value set or invalid input.", "Invalid", JOptionPane.WARNING_MESSAGE);
+            } else {
+                printReceipt(name, price, quantity);
+                menuAmount3.setValue(0);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Total button has been pressed. Need to reset.", "Invalid", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_menuAdd3ActionPerformed
 
     private void menuAdd4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAdd4ActionPerformed
-        // TODO add your handling code here:
+        if (this.totalButtonPressed == false) {
+            String name = labelMenuName4.getText();
+            String priceText = menuPrice4.getText();
+            String removeP = priceText.replace("₱", "").trim();
+            int price = Integer.parseInt(removeP);
+            int quantity = Integer.parseInt(menuAmount4.getValue().toString());
+
+            System.out.println(name + "-" + price + "-" + quantity);
+            if (quantity <= 0) {
+                JOptionPane.showMessageDialog(null, "No value set or invalid input.", "Invalid", JOptionPane.WARNING_MESSAGE);
+            } else {
+                printReceipt(name, price, quantity);
+                menuAmount4.setValue(0);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Total button has been pressed. Need to reset.", "Invalid", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_menuAdd4ActionPerformed
 
     private void menuAdd5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAdd5ActionPerformed
-        // TODO add your handling code here:
+        if (this.totalButtonPressed == false) {
+            String name = labelMenuName5.getText();
+            String priceText = menuPrice5.getText();
+            String removeP = priceText.replace("₱", "").trim();
+            int price = Integer.parseInt(removeP);
+            int quantity = Integer.parseInt(menuAmount5.getValue().toString());
+
+            System.out.println(name + "-" + price + "-" + quantity);
+            if (quantity <= 0) {
+                JOptionPane.showMessageDialog(null, "No value set or invalid input.", "Invalid", JOptionPane.WARNING_MESSAGE);
+            } else {
+                printReceipt(name, price, quantity);
+                menuAmount5.setValue(0);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Total button has been pressed. Need to reset.", "Invalid", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_menuAdd5ActionPerformed
 
     private void menuAdd6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAdd6ActionPerformed
-        // TODO add your handling code here:
+        if (this.totalButtonPressed == false) {
+            String name = labelMenuName6.getText();
+            String priceText = menuPrice6.getText();
+            String removeP = priceText.replace("₱", "").trim();
+            int price = Integer.parseInt(removeP);
+            int quantity = Integer.parseInt(menuAmount6.getValue().toString());
+
+            System.out.println(name + "-" + price + "-" + quantity);
+            if (quantity <= 0) {
+                JOptionPane.showMessageDialog(null, "No value set or invalid input.", "Invalid", JOptionPane.WARNING_MESSAGE);
+            } else {
+                printReceipt(name, price, quantity);
+                menuAmount6.setValue(0);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Total button has been pressed. Need to reset.", "Invalid", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_menuAdd6ActionPerformed
 
     private void menuAdd7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAdd7ActionPerformed
-        // TODO add your handling code here:
+        if (this.totalButtonPressed == false) {
+            String name = labelMenuName7.getText();
+            String priceText = menuPrice7.getText();
+            String removeP = priceText.replace("₱", "").trim();
+            int price = Integer.parseInt(removeP);
+            int quantity = Integer.parseInt(menuAmount7.getValue().toString());
+
+            System.out.println(name + "-" + price + "-" + quantity);
+            if (quantity <= 0) {
+                JOptionPane.showMessageDialog(null, "No value set or invalid input.", "Invalid", JOptionPane.WARNING_MESSAGE);
+            } else {
+                printReceipt(name, price, quantity);
+                menuAmount7.setValue(0);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Total button has been pressed. Need to reset.", "Invalid", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_menuAdd7ActionPerformed
 
     private void menuAdd8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAdd8ActionPerformed
-        // TODO add your handling code here:
+        if (this.totalButtonPressed == false) {
+            String name = labelMenuName8.getText();
+            String priceText = menuPrice8.getText();
+            String removeP = priceText.replace("₱", "").trim();
+            int price = Integer.parseInt(removeP);
+            int quantity = Integer.parseInt(menuAmount8.getValue().toString());
+
+            System.out.println(name + "-" + price + "-" + quantity);
+            if (quantity <= 0) {
+                JOptionPane.showMessageDialog(null, "No value set or invalid input.", "Invalid", JOptionPane.WARNING_MESSAGE);
+            } else {
+                printReceipt(name, price, quantity);
+                menuAmount8.setValue(0);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Total button has been pressed. Need to reset.", "Invalid", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_menuAdd8ActionPerformed
 
     private void menuAdd9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAdd9ActionPerformed
-        // TODO add your handling code here:
+        if (this.totalButtonPressed == false) {
+            String name = labelMenuName9.getText();
+            String priceText = menuPrice9.getText();
+            String removeP = priceText.replace("₱", "").trim();
+            int price = Integer.parseInt(removeP);
+            int quantity = Integer.parseInt(menuAmount9.getValue().toString());
+
+            System.out.println(name + "-" + price + "-" + quantity);
+            if (quantity <= 0) {
+                JOptionPane.showMessageDialog(null, "No value set or invalid input.", "Invalid", JOptionPane.WARNING_MESSAGE);
+            } else {
+                printReceipt(name, price, quantity);
+                menuAmount9.setValue(0);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Total button has been pressed. Need to reset.", "Invalid", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_menuAdd9ActionPerformed
 
     private void menuAdd10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAdd10ActionPerformed
-        // TODO add your handling code here:
+        if (this.totalButtonPressed == false) {
+            String name = labelMenuName10.getText();
+            String priceText = menuPrice10.getText();
+            String removeP = priceText.replace("₱", "").trim();
+            int price = Integer.parseInt(removeP);
+            int quantity = Integer.parseInt(menuAmount10.getValue().toString());
+
+            System.out.println(name + "-" + price + "-" + quantity);
+            if (quantity <= 0) {
+                JOptionPane.showMessageDialog(null, "No value set or invalid input.", "Invalid", JOptionPane.WARNING_MESSAGE);
+            } else {
+                printReceipt(name, price, quantity);
+                menuAmount10.setValue(0);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Total button has been pressed. Need to reset.", "Invalid", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_menuAdd10ActionPerformed
 
-    private void totalAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_totalAmountActionPerformed
+    private void grandTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grandTotalActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_totalAmountActionPerformed
+    }//GEN-LAST:event_grandTotalActionPerformed
 
     private void menuAdd2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuAdd2ActionPerformed
-        // TODO add your handling code here:
+        if (this.totalButtonPressed == false) {
+            String name = labelMenuName2.getText();
+            String priceText = menuPrice2.getText();
+            String removeP = priceText.replace("₱", "").trim();
+            int price = Integer.parseInt(removeP);
+            int quantity = Integer.parseInt(menuAmount2.getValue().toString());
+
+            System.out.println(name + "-" + price + "-" + quantity);
+            if (quantity <= 0) {
+                JOptionPane.showMessageDialog(null, "No value set or invalid input.", "Invalid", JOptionPane.WARNING_MESSAGE);
+            } else {
+                printReceipt(name, price, quantity);
+                menuAmount2.setValue(0);
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Total button has been pressed. Need to reset.", "Invalid", JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_menuAdd2ActionPerformed
 
     /**
@@ -1361,6 +1641,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JButton buttonReceipt;
     private javax.swing.JButton buttonReset;
     private javax.swing.JButton buttonTotal;
+    private javax.swing.JTextField grandTotal;
     private javax.swing.JLabel labelImage1;
     private javax.swing.JLabel labelImage10;
     private javax.swing.JLabel labelImage2;
@@ -1404,6 +1685,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel labelMenuQuantity8;
     private javax.swing.JLabel labelMenuQuantity9;
     private javax.swing.JLabel labelMenuTitle;
+    private javax.swing.JLabel labelTimeAndDate;
     private javax.swing.JLabel labelTitle;
     private javax.swing.JLabel labelTotal;
     private javax.swing.JButton menuAdd1;
@@ -1454,6 +1736,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel panelSideInnerWrapper;
     private javax.swing.JPanel panelSideOuterWrapper;
     private javax.swing.JPanel panelWrapper;
-    private javax.swing.JTextField totalAmount;
+    private javax.swing.JScrollPane scrollPanelReceipt;
+    private javax.swing.JTextArea textAreaReceipt;
     // End of variables declaration//GEN-END:variables
 }

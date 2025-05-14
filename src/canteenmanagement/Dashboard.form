@@ -31,7 +31,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="panelWrapper" alignment="0" max="-2" attributes="0"/>
+          <Component id="panelWrapper" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -106,20 +106,25 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Component id="labelLogoIcon" min="-2" pref="96" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="labelTitle" min="-2" pref="678" max="-2" attributes="0"/>
+                      <Component id="labelTitle" min="-2" pref="686" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
+                      <Component id="labelTimeAndDate" min="-2" pref="250" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="labelLogoIcon" alignment="0" pref="0" max="32767" attributes="0"/>
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="labelTitle" pref="84" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="labelTimeAndDate" max="32767" attributes="0"/>
+                          <Component id="labelTitle" alignment="0" pref="84" max="32767" attributes="0"/>
+                      </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -155,12 +160,26 @@
                 <Property name="text" type="java.lang.String" value="Canteen Management System"/>
               </Properties>
             </Component>
+            <Component class="javax.swing.JLabel" name="labelTimeAndDate">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Times New Roman" size="28" style="1"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="panelBodyWrapper">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="dc" green="e9" red="f5" type="rgb"/>
+            </Property>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1093, 601]"/>
+            </Property>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[1093, 601]"/>
             </Property>
           </Properties>
 
@@ -242,9 +261,9 @@
                           <Component id="labelMenuTitle" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="panelMenu3" pref="262" max="32767" attributes="0"/>
-                              <Component id="panelMenu4" pref="262" max="32767" attributes="0"/>
-                              <Component id="panelMenu5" pref="262" max="32767" attributes="0"/>
+                              <Component id="panelMenu3" max="32767" attributes="0"/>
+                              <Component id="panelMenu4" max="32767" attributes="0"/>
+                              <Component id="panelMenu5" max="32767" attributes="0"/>
                               <Component id="panelMenu1" pref="262" max="32767" attributes="0"/>
                               <Component id="panelMenu2" alignment="0" max="32767" attributes="0"/>
                           </Group>
@@ -376,7 +395,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Times New Roman" size="14" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="&#x20b1;35"/>
+                        <Property name="text" type="java.lang.String" value="&#x20b1;15"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSpinner" name="menuAmount1">
@@ -1887,9 +1906,9 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="labelTotal" pref="112" max="32767" attributes="0"/>
+                                  <Component id="labelTotal" pref="167" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="totalAmount" min="-2" pref="218" max="-2" attributes="0"/>
+                                  <Component id="grandTotal" min="-2" pref="218" max="-2" attributes="0"/>
                               </Group>
                               <Component id="labelMenuName11" max="32767" attributes="0"/>
                               <Component id="panelReceipt" alignment="0" max="32767" attributes="0"/>
@@ -1908,7 +1927,7 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="labelTotal" max="32767" attributes="0"/>
-                              <Component id="totalAmount" pref="47" max="32767" attributes="0"/>
+                              <Component id="grandTotal" pref="47" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       </Group>
@@ -1931,15 +1950,42 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="scrollPanelReceipt" alignment="0" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="scrollPanelReceipt" alignment="0" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
+                  <SubComponents>
+                    <Container class="javax.swing.JScrollPane" name="scrollPanelReceipt">
+                      <AuxValues>
+                        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                      </AuxValues>
+
+                      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                      <SubComponents>
+                        <Component class="javax.swing.JTextArea" name="textAreaReceipt">
+                          <Properties>
+                            <Property name="columns" type="int" value="20"/>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Consolas" size="12" style="0"/>
+                            </Property>
+                            <Property name="rows" type="int" value="5"/>
+                            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                              <Border info="null"/>
+                            </Property>
+                            <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                              <Color blue="0" green="0" red="0" type="rgb"/>
+                            </Property>
+                            <Property name="enabled" type="boolean" value="false"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                  </SubComponents>
                 </Container>
                 <Component class="javax.swing.JLabel" name="labelMenuName11">
                   <Properties>
@@ -1958,16 +2004,16 @@
                     <Property name="text" type="java.lang.String" value="Total:   &#x20b1;"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="totalAmount">
+                <Component class="javax.swing.JTextField" name="grandTotal">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Times New Roman" size="24" style="1"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="0.0"/>
+                    <Property name="text" type="java.lang.String" value="0"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="totalAmountActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grandTotalActionPerformed"/>
                   </Events>
                 </Component>
               </SubComponents>
