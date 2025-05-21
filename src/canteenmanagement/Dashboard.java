@@ -11,12 +11,17 @@ public class Dashboard extends javax.swing.JFrame {
     int total;
     int x;
     boolean totalButtonPressed = false;
+    
+    //User's Informations
+    private User user;
 
-    public Dashboard() {
+    public Dashboard(User user) {
+        this.user = user;
         initComponents();
         startClock();
         resizeLogoTitle();
         setScalingImages();
+        labelUsername.setText(user.getFirstname()+ " " + user.getLastname());
     }
 
     /**
@@ -120,7 +125,9 @@ public class Dashboard extends javax.swing.JFrame {
         buttonTotal = new javax.swing.JButton();
         buttonReceipt = new javax.swing.JButton();
         buttonReset = new javax.swing.JButton();
-        buttonExit = new javax.swing.JButton();
+        buttonLogout = new javax.swing.JButton();
+        labelWelcomeText = new javax.swing.JLabel();
+        labelUsername = new javax.swing.JLabel();
         panelSideOuterWrapper = new javax.swing.JPanel();
         panelSideInnerWrapper = new javax.swing.JPanel();
         panelReceipt = new javax.swing.JPanel();
@@ -132,7 +139,6 @@ public class Dashboard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Dashboard Frame");
-        setMaximumSize(new java.awt.Dimension(1455, 755));
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
@@ -1053,15 +1059,23 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        buttonExit.setBackground(new java.awt.Color(199, 101, 90));
-        buttonExit.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
-        buttonExit.setText("Exit");
-        buttonExit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        buttonExit.addActionListener(new java.awt.event.ActionListener() {
+        buttonLogout.setBackground(new java.awt.Color(199, 101, 90));
+        buttonLogout.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
+        buttonLogout.setText("Logout");
+        buttonLogout.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        buttonLogout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonExitActionPerformed(evt);
+                buttonLogoutActionPerformed(evt);
             }
         });
+
+        labelWelcomeText.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        labelWelcomeText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelWelcomeText.setText("Welcome,");
+
+        labelUsername.setFont(new java.awt.Font("Times New Roman", 1, 28)); // NOI18N
+        labelUsername.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelUsername.setText("{Username}!");
 
         javax.swing.GroupLayout panelFooterWrapperLayout = new javax.swing.GroupLayout(panelFooterWrapper);
         panelFooterWrapper.setLayout(panelFooterWrapperLayout);
@@ -1075,18 +1089,26 @@ public class Dashboard extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(buttonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(buttonExit, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(buttonLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addGroup(panelFooterWrapperLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(labelUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 407, Short.MAX_VALUE)
+                    .addComponent(labelWelcomeText, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         panelFooterWrapperLayout.setVerticalGroup(
             panelFooterWrapperLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelFooterWrapperLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelFooterWrapperLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(buttonTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 79, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelFooterWrapperLayout.createSequentialGroup()
+                        .addComponent(labelWelcomeText, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(labelUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(buttonTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(buttonReceipt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(buttonReset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(buttonExit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(buttonLogout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -1341,6 +1363,12 @@ public class Dashboard extends javax.swing.JFrame {
                 "************** Canteen Management System **************\n" +
                 "Time: " + timeFormat.format(now) + "\t :|:\t Date: " + dateFormat.format(now) + "\n" +
                 "*******************************************************\n" +
+                "******************User's Information*******************\n" +
+                "User ID: " + user.getId() + "\n" +
+                "Name: " + user.getFirstname() + " " + user.getLastname() + "\n" +
+                "Username: " + user.getUsername() + "\n" +
+                "Email: " + user.getEmail() + "\n" +
+                "*******************************************************\n" +
                 String.format("%-4s %-20s %-8s %-5s %-12s\n", "#", "Name", "Price", "Qty", "Total Amount")
             );
         }
@@ -1414,12 +1442,17 @@ public class Dashboard extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_buttonTotalActionPerformed
 
-    private void buttonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonExitActionPerformed
-        int exit = JOptionPane.showConfirmDialog(null, "Do you really want exit the application?", "Select", JOptionPane.YES_NO_OPTION);
-        if (exit == 0) {
-            System.exit(0);
+    private void buttonLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLogoutActionPerformed
+        int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you want to log out?", "Logout", JOptionPane.YES_NO_OPTION);
+
+        if (confirm == JOptionPane.YES_OPTION) {
+            Login loginFrame = new Login();
+            loginFrame.setVisible(true);
+            loginFrame.pack();
+            loginFrame.setLocationRelativeTo(null);
+            this.dispose();
         }
-    }//GEN-LAST:event_buttonExitActionPerformed
+    }//GEN-LAST:event_buttonLogoutActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
@@ -1635,7 +1668,7 @@ public class Dashboard extends javax.swing.JFrame {
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton buttonExit;
+    private javax.swing.JButton buttonLogout;
     private javax.swing.JButton buttonReceipt;
     private javax.swing.JButton buttonReset;
     private javax.swing.JButton buttonTotal;
@@ -1686,6 +1719,8 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel labelTimeAndDate;
     private javax.swing.JLabel labelTitle;
     private javax.swing.JLabel labelTotal;
+    private javax.swing.JLabel labelUsername;
+    private javax.swing.JLabel labelWelcomeText;
     private javax.swing.JButton menuAdd1;
     private javax.swing.JButton menuAdd10;
     private javax.swing.JButton menuAdd2;
