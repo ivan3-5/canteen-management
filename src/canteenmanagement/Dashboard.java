@@ -1,5 +1,6 @@
 package canteenmanagement;
 
+import com.itextpdf.text.Paragraph;
 import java.awt.*;
 import java.io.File;
 import java.nio.file.Path;
@@ -1384,7 +1385,7 @@ public class Dashboard extends javax.swing.JFrame {
     }
     
     public void saveReceiptToPDF() {
-        ExportPanelToPDF exportPanel = new ExportPanelToPDF();
+        ExportTextToPDF exportToPDF = new ExportTextToPDF();
         
         String userHome = System.getProperty("user.home");
         Path downloadsPath = Paths.get(userHome, "Downloads");
@@ -1392,7 +1393,7 @@ public class Dashboard extends javax.swing.JFrame {
         
         File receiptFile = receiptPath.toFile();
         
-        exportPanel.exportPanelToPDF(panelReceipt, receiptFile.getAbsolutePath());
+        exportToPDF.exportTextAreaToPDF(textAreaReceipt, receiptFile.getAbsolutePath());
     }
     
     private void buttonReceiptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReceiptActionPerformed
